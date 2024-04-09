@@ -2,76 +2,290 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
+}
 
-  html {
-    font-size: 62.5%;
-  }
-
-  body {
-    font-size: 1rem;
-    background-color: #fff;
-    color: #000;
-    width: 100vw;
-    height: 100%;
-    text-rendering: optimizelegibility;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    text-decoration: none;
+body {
     font-family: Quicksand, sans-serif;
-  }
-
-  html, body {
-    height: auto;
 }
-a{text-decoration: none;}
-.main{
-    width: 100%;
-    height: 100%;
+
+.main {
     display: flex;
-    
+    height: 100vh;
 }
 
-.left{
+.left {
     width: 220px;
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
-    height: 100vh;
-    overflow-y: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    height: auto;
+    overflow-y: auto; /* Adicionado para habilitar a rolagem vertical, se necessário */
 }
-.title-container{
-    width: 100%;
+
+.title-container {
     padding: 22px 10px;
     background-color: #FFB354;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #FFB354, #EE7A3A); /* Gradiente linear de vermelho para amarelo da esquerda para a direita */
 }
 
 .title-container h1 {
-   font-size: 30px;
-   font-weight: 700;
+    font-size: 30px;
+    font-weight: 700;
 }
 
-.links-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.links-container {
+    padding: 10px;
 }
 
 .links-content {
-    width: 100%;
-    padding: 5px 12px;
-    border-bottom: 2px solid #E7E7E7;
+    padding: 5px 0;
 }
 
-.links-container a {
-    font-size: 15px;
-    font-weight: 500;
+.links-content a {
+    display: block;
+    text-decoration: none;
     color: #725C5C;
+    font-size: 15px;
+}
+
+.right {
+    flex: 1;
+    padding: 0px;
+}
+
+.header {
+    background-color: #FDF1EB;
+    padding-left: 45px;
+    padding-top: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative; /* Necessário para posicionamento absoluto do ícone */
+}
+    
+
+
+.profile-icon {
+    background-image: url('./assets/icone.png'); /* Caminho para o arquivo de imagem do ícone */
+    width: 40px; /* Tamanho do ícone */
+    height: 40px;
+    border-radius: 50%; /* Torna o ícone um círculo */
+    position: absolute; /* Posicionamento absoluto */
+    top: 50%; /* Centraliza verticalmente */
+    right: 20px; /* Distância da direita */
+    transform: translateY(-50%); /* Corrige a centralização vertical */
+}
+
+
+.Center-title {
+    color: #ED7839;
+    padding-left: 45px;
+    padding-top: 10px;    
+}
+
+.titulo_centro{
+    font-weight: bold;
+    font-size: 30px
+}
+.orange-btn {
+    background-color: #ED7839; /* Fundo laranja */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda */
+    border-radius: 4%;
+    padding: 5px 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    height: 35px; /* Altura maior */
+    position: relative; /* Adiciona posicionamento relativo */
+    top: -65px; /* Mover para cima */
+}
+
+.links-content {
+    /* Estilos padrão para os itens da lista */
+    width: 100%; /* Largura igual à largura do contêiner */
+    border-bottom: 1px solid #ccc; /* Adiciona uma linha separadora */
+}
+
+.links-content a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #000; /* Cor do texto */
+    display: block; /* Torna os links ocuparem toda a largura */
+    padding: 5px; /* Adiciona espaçamento interno */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.links-content:hover {
+    background-color: #FDF1EB; /* Altere para a cor desejada */
+}
+
+.txt_abaixo_btn{
+    position: relative; /* Adiciona posicionamento relativo */
+    top: -50px; /* Mover para cima */
+    font-weight: bold;
+}
+.orange-btn i {
+    color: white; /* Cor do ícone branco */
+}
+
+.btns {
+    text-align: right; /* Alinha os botões à direita */
+    margin-right: 50px;
+    font-size: 13px;
+}
+
+.Detalhes {
+    width: 250px; /* Define a largura da div como 242 pixels */
+    height: 439px; /* Define a altura da div como 439 pixels */
+    text-align: left; /* Alinha os botões à esquerda */
+    margin-left: 1360px; /* Ajusta a margem esquerda */
+    border: 1px solid #ECECEC;
+    font-size: 14px;
+}
+
+.detalhe_top{
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #FDF1EB;
+}
+
+.Detalhes ul {
+    list-style-type: none; /* Remove marcadores (pontos e números) dos itens da lista */
+}
+
+.Detalhes ol {
+    list-style-type: none; /* Remove marcadores (pontos e números) dos itens da lista */
+}
+
+.video{
+    width: 784px;
+    height: 300px;
+}
+.Center {
+    width: 100%;
+    height: 200px; /* Ajuste conforme necessário */
+    background-color: rgba(141, 53, 6, 0.5);
+    border-radius: 3px;
+}
+
+.resumo h1{
+    padding: 5px;
+    width: 1600px;
+    height: 45px;
+    background-color: #FDF1EB;
+}
+
+.discussoes h1{
+    margin-top: 30px;
+    width: 1600px;
+    height: 45px;
+    background-color: #FDF1EB;
+}
+
+.discussoes h2{
+    margin-top: 30px;
+}
+
+.discussoes h3{
+    margin-top: 30px;
+}
+
+.text_discussoes{
+    margin-top: 30px;
+}
+
+.conteudo_disc{
+    width: 1600px;
+    height: 500px;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.icon-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.icon-item {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.icon-item i {
+    font-size: 36px;
+    color: #007bff; /* Cor do ícone */
+}
+
+.icon-item span {
+    display: block;
+    margin-top: 5px;
+}
+
+
+.texto{
+    width: 1600px;
+    text-align: justify;
+}
+.PTBR {
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Define a borda com 1px de largura e cor preta com 50% de opacidade */
+    background-color: transparent; /* Define o fundo como transparente */
+    border-radius: 8%;
+    width: 97px;
+    height: 34px;
+    position: absolute;
+    top: 33%; /* Centraliza verticalmente */
+    right: 380px; /* Distância da direita */
+    text-align: center;
+    line-height: 34px; /* Centraliza verticalmente o texto */
+}
+
+.icon_perfil{
+    border: 2px solid black; 
+    width: 40px; /* Tamanho do ícone */
+    height: 40px;
+    border-radius: 50%; /* Torna o ícone um círculo */
+    position: absolute; /* Posicionamento absoluto */
+    top: 50%; /* Centraliza verticalmente */
+    right: 40px; /* Distância da direita */
+    transform: translateY(-50%); /* Corrige a centralização vertical */ 
+}
+
+.email{
+    position: absolute; /* Posicionamento absoluto */
+    top: 50%; /* Centraliza verticalmente */
+    right: 93px; /* Distância da direita */ 
+    font-size: 15px;
+}
+
+.Bemvindo{
+    position: absolute; /* Posicionamento absoluto */
+    top: 30%; /* Centraliza verticalmente */
+    right: 93px; /* Distância da direita */ 
+    font-size: 16px;
+}
+.txt_header_2{
+    font-family: Roboto, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 25.78px;
+}
+
+.txt_header_1{
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.78px;
+}
+
+.txt_header_3{
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.78px;
 }
